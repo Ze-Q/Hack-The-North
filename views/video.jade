@@ -10,6 +10,12 @@ html
     script(type='text/javascript' src='//assets.ziggeo.com/js/ziggeo-jquery-json2-betajs-player.min.js')
     script(type='text/javascript').
       ZiggeoApi.token = "2a6731f8f222175f8df0a416ac3736c0";
+      if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        $(".video").attr({
+        "ziggeo-height": 110,
+        "ziggeo-width": 176
+      });
+      }
     meta(name="viewport" content="width=device-width, initial-scale=1")
   body(class='container-fluid')
     div(class='row')
