@@ -3,6 +3,7 @@ var router = express.Router();
 
 
 var sendgrid  = require('sendgrid')('g-cheng', 'HackTheNorth');
+var client = require('twilio')('AC903fd090648a45c704722192d1a383a6', '253139bb91c20b8238ac1eb6b77ab917');
 
 /* GET recording page. */
 router.get('/', function(req, res) {
@@ -42,5 +43,28 @@ router.post('/sendEmail', function(req, res) {
     res.location("/");
 	res.redirect("/");
 });
+
+router.post('/sendSMS', function(req, res){
+
+	var to = req.body.number;
+
+	client.sendSms({
+	    to: to,
+	    from:'13658000595',
+	    body:'http://quickvid.herokuapp.com/'
+	    }, 
+	    function(error, message) {
+	        if (!error) {
+	            console.log('Success! The SID for this SMS message is:');
+	            console.log(message.sid);
+	            console.log('Message sent on:');
+	            console.log(message.dateCreated);
+	        } else {
+	            console.log('Oops! There was an error.', error);
+	        }
+	});
+
+});
+
 
 module.exports = router;
