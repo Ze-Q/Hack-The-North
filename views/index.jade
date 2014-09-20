@@ -14,9 +14,10 @@ block content
   div(class='row email')
     div(class='col-xs-12 text-center')
       form#formAddUser(name="submit",method="post",action="/submit")
-        input#inputUserName(type="text", placeholder="name", name="username")
-        input#inputUserEmail(type="text", placeholder="useremail", name="useremail")
-        input#inputPhoneNumber(type="text", placeholder="number", name="number")
+        input#inputUserName(type="text", placeholder="My Email", name="username")
+        input#inputUserEmail(type="text", placeholder="Receiver(s) Email", name="useremail")
+        br
+        input#inputPhoneNumber(type="text", placeholder="Receiver(s) Number", name="number")
         input#tokenId(type="hidden" placeholder="tokenId" name="tokenId")
         button#btnSubmit(type="submit") submit
   div(class='row text')

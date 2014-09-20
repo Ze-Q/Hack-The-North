@@ -63,3 +63,7 @@ a {
 .text {
 	margin-top: 2em;
 }
+
+#formAddUser {
+  display: none;
+}
