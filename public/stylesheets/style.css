@@ -1,8 +1,65 @@
+body,
+input,
+.ui.input input,
+button,
+textarea {
+  font-family: 'Lato', 'Helvetica Neue', 'Helvetica', sans-serif;
+}
+
+html,
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: url(../images/dark-wood.png), repeat-x, repeat;
+  color: white;
+  font-size: 16px;
+}
+
+.overlay {
+  content:'';
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: -webkit-linear-gradient(to bottom right,#229CFF ,#00AA77 );
+  background-image: -moz-linear-gradient(to bottom right,#229CFF ,#00AA77 );
+  background-image: -o-linear-gradient(to bottom right,#229CFF ,#00AA77 );
+  background-image: -ms-linear-gradient(to bottom right,#229CFF ,#00AA77 );
+  background-image: linear-gradient(to bottom right,#229CFF ,#00AA77 );
+  opacity: .5;
+}
+
+h1 {
+  font-family: 'Lato', 'Helvetica Neue Light', 'Helvetica', sans-serif;
+  font-size: 150%;
+}
+
+p {
+  margin-top: 0;
+  text-transform: uppercase;
+  font-size: 1.05em;
+  letter-spacing: 1.7px;
 }
 
 a {
   color: #00B7FF;
+}
+
+.video {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.retrieved {
+  margin-top: 2em;
+}
+
+.email,
+.text {
+	margin-top: 2em;
 }

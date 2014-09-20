@@ -1,4 +1,4 @@
 Hack-The-North
 ==============
 
-Team Mayhem at Hack The North!
+QuickVid! Team Mayhem at Hack The North!
