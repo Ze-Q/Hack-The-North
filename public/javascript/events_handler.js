@@ -8,6 +8,6 @@ $(document).ready(function() {
 		$(".video").attr({
 			"ziggeo-height": 100,
 			"ziggeo-width": 160
-		});
+		}).css('margin-bottom', 5);
 	}
 });
