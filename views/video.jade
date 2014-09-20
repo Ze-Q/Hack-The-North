@@ -11,11 +11,10 @@ html
       ZiggeoApi.token = "2a6731f8f222175f8df0a416ac3736c0";
     meta(name="viewport" content="width=device-width, initial-scale=1")
   body(class='container-fluid')
-    div(class='overlay')
     div(class='row')
       div(class='col-xs-12 text-center')
         h1 Shared Video
     div(class='row retrieved')
-      div(class='col-xs-12 text-center')
-        ziggeo(ziggeo-video='#{token}' class='video') 
+      div(class='col-xs-12')
+        ziggeo(ziggeo-video='#{token}' class='video'  ziggeo-height=600 ziggeo-width=960) 
 
