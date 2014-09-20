@@ -7,3 +7,8 @@ block content
         input#inputUserName(type="text", placeholder="username", name="username")
         input#inputUserEmail(type="text", placeholder="useremail", name="useremail")
         button#btnSubmit(type="submit") submit
+
+  form#formAddUser(name="sendSMS",method="post",action="/sendSMS")
+        input#inputPhoneNumber(type="text", placeholder="number", name="number")
+        button#btnSubmit(type="submit") submit
+
