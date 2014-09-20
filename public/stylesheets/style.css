@@ -55,6 +55,10 @@ a {
   margin-right: auto;
 }
 
+.retrieved {
+  margin-top: 2em;
+}
+
 .email,
 .text {
 	margin-top: 2em;
