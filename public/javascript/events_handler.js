@@ -6,8 +6,8 @@ $(document).ready(function() {
 	});
 	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 		$(".video").attr({
-			"ziggeo-height": 100,
-			"ziggeo-width": 160
-		}).css('margin-bottom', 5);
+			"ziggeo-height": 110,
+			"ziggeo-width": 176
+		}).css('margin-bottom', 25);
 	}
 });
