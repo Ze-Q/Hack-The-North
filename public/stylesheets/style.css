@@ -51,7 +51,7 @@ a {
 .text {
 	margin-top: 2em;
 }
-
+/*
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
 	h1 {
 		font-size: 800% !important;
@@ -62,7 +62,6 @@ a {
 	}
 }
 
-/* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
 	h1 {
 		font-size: 800% !important;
@@ -72,4 +71,4 @@ a {
 		font-size: 3em !important;
 	}
 
-}
+}*/
