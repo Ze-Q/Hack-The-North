@@ -39,7 +39,7 @@ function sendEmail (req, res) {
     var to = parseEmailList(req.body.useremail);
     var token = req.body.tokenId;
 
-    var videoLink = 'http://quickvid.herokuapp.com' + '/video?token=' + token;
+    var videoLink = 'http://quickvid.me/' + '/video?token=' + token;
     console.log('button pressed with token', token);
 
     var payload   = {
@@ -62,7 +62,7 @@ function sendSms (req, res) {
 
 	var to = req.body.number;
 	var token = req.body.tokenId;
-    var videoLink = 'http://quickvid.herokuapp.com' + '/video?token=' + token;
+    var videoLink = 'http://quickvid.me/' + '/video?token=' + token;
 
 	client.sendSms({
 	    to: to,
