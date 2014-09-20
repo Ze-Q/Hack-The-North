@@ -36,7 +36,8 @@ router.post('/sendEmail', function(req, res) {
 	  console.log(json);
 	});
 
-
+    res.location("/");
+	res.redirect("/");
 });
 
 module.exports = router;
