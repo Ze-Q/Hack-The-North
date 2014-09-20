@@ -11,6 +11,18 @@ block content
   div(class='row')
     div(class='col-xs-12')
       ziggeo(class='video' ziggeo-height=600 ziggeo-width=960)
+
+
+    link(rel='stylesheet' href='/stylesheets/style.css')
+
+
+    link(rel='stylesheet', href='/stylesheets/microphone.css')
+    script(type='text/javascript' src='/javascript/microphone.js')
+    script(type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js')
+    script(type='text/javascript' src='/javascript/scripts.js')
+
+  div(id='microphone')
+
   div(class='email row')    
     form#formAddUser(name="submit",method="post",action="/submit" style="display: inline-block;", class="form", role="form")
       div(class='form-group col-md-offset-1 col-md-3 col-xs-12')    
