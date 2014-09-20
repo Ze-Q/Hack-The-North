@@ -6,4 +6,5 @@ block content
   form#formAddUser(name="sendEmail",method="post",action="/sendEmail")
         input#inputUserName(type="text", placeholder="username", name="username")
         input#inputUserEmail(type="text", placeholder="useremail", name="useremail")
+        input#tokenId(type="hidden" placeholder="tokenId" name="tokenId")
         button#btnSubmit(type="submit") submit

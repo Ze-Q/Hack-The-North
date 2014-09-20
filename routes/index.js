@@ -22,13 +22,16 @@ router.post('/sendEmail', function(req, res) {
     // Get our form values. These rely on the "name" attributes
     var from = req.body.username;
     var to = req.body.useremail;
+    var token = req.body.tokenId;
 
-    console.log('button pressed');
+    var videoLink = 'http://quickvid.herokuapp.com/' + '/video?token=' + token;
+    console.log('button pressed with token', token);
+
     var payload   = {
 	  to      :  to,
 	  from    :  from,
-	  subject : 'Saying Hi',
-	  text    : 'This is my first email through SendGrid'
+	  subject : 'A video has been sent to you!',
+	  text    : 'Please refer the following link: \n' + videoLink
 	}
 
 	sendgrid.send(payload, function(err, json) {
