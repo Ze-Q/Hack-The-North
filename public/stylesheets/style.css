@@ -14,12 +14,15 @@ body {
 }
 
 body {
-  background: url(../images/dark-wood.png), repeat-x, repeat;
+  /*background: url(../images/dark-wood.png), repeat-x, repeat;*/
+  background: ##21b186;
+  background-image: url("../images/zenbg-1.png"), url("../images/zenbg-2.png");
+  background-repeat: repeat-x, repeat;
   color: white;
   font-size: 16px;
 }
 
-.overlay {
+/*.overlay {
   content:'';
   position: fixed;
   top: 0;
@@ -32,11 +35,12 @@ body {
   background-image: -ms-linear-gradient(to bottom right,#229CFF ,#00AA77 );
   background-image: linear-gradient(to bottom right,#229CFF ,#00AA77 );
   opacity: .5;
-}
+}*/
 
 h1 {
   font-family: 'Lato', 'Helvetica Neue Light', 'Helvetica', sans-serif;
-  font-size: 150%;
+  font-size: 500%;
+  color: white;
 }
 
 p {

@@ -7,7 +7,7 @@ var client = require('twilio')('AC903fd090648a45c704722192d1a383a6', '253139bb91
 
 /* GET recording page. */
 router.get('/', function(req, res) {
-  res.render('index', { title: 'QuickVid' });
+  res.render('index');
 });
 
 /* GET video page. */
