@@ -3,13 +3,10 @@ extends layout
 block content
   h1= title
   ziggeo
-  form#formAddUser(name="sendEmail",method="post",action="/sendEmail")
+  form#formAddUser(name="submit",method="post",action="/submit")
         input#inputUserName(type="text", placeholder="username", name="username")
         input#inputUserEmail(type="text", placeholder="useremail", name="useremail")
-        input#tokenId(type="hidden" placeholder="tokenId" name="tokenId")
-        button#btnSubmit(type="submit") submit
-
-  form#formAddUser(name="sendSMS",method="post",action="/sendSMS")
         input#inputPhoneNumber(type="text", placeholder="number", name="number")
+        input#tokenId(type="hidden" placeholder="tokenId" name="tokenId")
         button#btnSubmit(type="submit") submit
 

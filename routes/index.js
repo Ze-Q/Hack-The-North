@@ -18,14 +18,44 @@ router.get('/video', function(req, res) {
 });
 
 // email
-router.post('/sendEmail', function(req, res) {
+router.post('/submit', function(req, res) {
+
+    // Get our form values. These rely on the "name" attributes
+   /* var fromEmail = req.body.username;
+    var toEmail = req.body.useremail;
+	var toNumber = req.body.number;
+
+    var token = req.body.tokenId;
+
+    var videoLink = 'http://quickvid.herokuapp.com' + '/video?token=' + token;
+
+    var payload   = {
+	  to      :  toEmail,
+	  from    :  fromEmail,
+	  subject : 'A video has been sent to you!',
+	  text    : 'Please refer the following link: \n' + videoLink
+	}
+
+	sendgrid.send(payload, function(err, json) {
+	  if (err) { console.error(err); }
+	  console.log(json);
+	});
+*/
+	sendEmail(req, res);
+	sendSms(req, res);
+
+    res.location("/");
+	res.redirect("/");
+});
+
+function sendEmail (req, res) {
 
     // Get our form values. These rely on the "name" attributes
     var from = req.body.username;
     var to = req.body.useremail;
     var token = req.body.tokenId;
 
-    var videoLink = 'http://quickvid.herokuapp.com/' + '/video?token=' + token;
+    var videoLink = 'http://quickvid.herokuapp.com' + '/video?token=' + token;
     console.log('button pressed with token', token);
 
     var payload   = {
@@ -42,16 +72,18 @@ router.post('/sendEmail', function(req, res) {
 
     res.location("/");
 	res.redirect("/");
-});
+}
 
-router.post('/sendSMS', function(req, res){
+function sendSms (req, res) {
 
 	var to = req.body.number;
+	var token = req.body.tokenId;
+    var videoLink = 'http://quickvid.herokuapp.com' + '/video?token=' + token;
 
 	client.sendSms({
 	    to: to,
 	    from:'13658000595',
-	    body:'http://quickvid.herokuapp.com/'
+	    body:videoLink
 	    }, 
 	    function(error, message) {
 	        if (!error) {
@@ -64,7 +96,7 @@ router.post('/sendSMS', function(req, res){
 	        }
 	});
 
-});
+}
 
 
 module.exports = router;
