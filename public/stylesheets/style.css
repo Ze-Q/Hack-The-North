@@ -55,11 +55,11 @@ a {
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
 	h1 {
-		font-size: 800%;
+		font-size: 800% !important;
 	}
 
 	p {
-		font-size: 3em;
+		font-size: 3em !important;
 	}
 
 }
