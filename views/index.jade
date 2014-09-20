@@ -1,15 +1,26 @@
 extends layout
 
 block content
-  h1= title
-  ziggeo
-  form#formAddUser(name="sendEmail",method="post",action="/sendEmail")
+  div(class='overlay')
+  div(class='row')
+    div(class='col-xs-12 text-center')
+      h1= title
+  div(class='row')
+    div(class='col-xs-12 text-center')
+      p The fastest way to record and send videos.
+  div(class='row')
+    div(class='col-xs-12 text-center')
+      ziggeo(class='video')
+  div(class='row email')
+    div(class='col-xs-12 text-center')
+      form#formAddUser(name="sendEmail",method="post",action="/sendEmail")
         input#inputUserName(type="text", placeholder="username", name="username")
         input#inputUserEmail(type="text", placeholder="useremail", name="useremail")
         input#tokenId(type="hidden" placeholder="tokenId" name="tokenId")
         button#btnSubmit(type="submit") submit
-
-  form#formAddUser(name="sendSMS",method="post",action="/sendSMS")
+  div(class='row text')
+    div(class='col-xs-12 text-center')
+      form#formAddUser(name="sendSMS",method="post",action="/sendSMS")
         input#inputPhoneNumber(type="text", placeholder="number", name="number")
         button#btnSubmit(type="submit") submit
 
