@@ -13,13 +13,13 @@ block content
       ziggeo(class='video')
   div(class='email row')    
     form#formAddUser(name="submit",method="post",action="/submit" style="display: inline-block;", class="form", role="form")
-      div(class='form-group col-xs-offset-1 col-xs-3')    
+      div(class='form-group col-md-offset-1 col-md-3 col-xs-12')    
         input#inputUserName(type="text", placeholder="My Email", name="username" class="form-control")
-      div(class='form-group col-xs-3') 
+      div(class='form-group col-md-3 col-xs-12') 
         div(class="input-group")
           div(class="input-group-addon") @
           input#inputUserEmail(type="text", placeholder="Receiver(s) Email", name="useremail" class="form-control")
-      div(class='form-group col-xs-3') 
+      div(class='form-group col-md-3 col-xs-12') 
         input#inputPhoneNumber(type="text", placeholder="Receiver(s) Number", name="number" class="form-control")
       input#tokenId(type="hidden" placeholder="tokenId" name="tokenId")
       button#btnSubmit(type="submit" class="btn btn-default") Send
