@@ -4,8 +4,7 @@ $(document).ready(function() {
 		var myForm =document.getElementById('formAddUser');
 		myForm.style.display='inline';
 	});
-
-	if (/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera) {
+	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 		$(".video").attr({
 			"ziggeo-height": 300,
 			"ziggeo-width": 480
