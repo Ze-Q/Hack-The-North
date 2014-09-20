@@ -3,3 +3,7 @@ extends layout
 block content
   h1= title
   ziggeo
+  form#formAddUser(name="sendEmail",method="post",action="/sendEmail")
+        input#inputUserName(type="text", placeholder="username", name="username")
+        input#inputUserEmail(type="text", placeholder="useremail", name="useremail")
+        button#btnSubmit(type="submit") submit
