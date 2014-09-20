@@ -15,8 +15,8 @@ body {
 
 body {
   /*background: url(../images/dark-wood.png), repeat-x, repeat;*/
-  background: ##21b186;
-  background-image: url("../images/zenbg-1.png"), url("../images/zenbg-2.png");
+  background: #21b186;
+  background-image: url("../images/bg1.png"), url("../images/bg2.png");
   background-repeat: repeat-x, repeat;
   color: white;
   font-size: 16px;
