@@ -10,7 +10,7 @@ block content
       p The fastest way to record and send videos.
   div(class='row')
     div(class='col-xs-12')
-      ziggeo(class='video' ziggeo-height=500 ziggeo-width=800)
+      ziggeo(class='video' ziggeo-countdown=3 ziggeo-height=500 ziggeo-width=800)
   
   div(class='row text-center')
     div(class='col-xs-3 col-xs-offset-6')
@@ -20,7 +20,7 @@ block content
     div(class='col-xs-6 col-xs-offset-3')
         p Use the microphone to dictate a phone number.
     
-  div(class='email row')    
+  div(class='email row')
     form#formAddUser(name="submit",method="post",action="/submit" style="display: inline-block;", class="form", role="form")
       div(class='form-group col-md-offset-1 col-md-3 col-xs-12')    
         input#inputUserName(type="text", placeholder="My Email", name="username" class="form-control")
