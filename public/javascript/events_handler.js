@@ -1,8 +1,7 @@
 $(document).ready(function() {
 	ZiggeoApi.Events.on("submitted", function (data) {
 		$("#tokenId").val(data.video.token);
-		var myForm =document.getElementById('formAddUser');
-		myForm.style.display='inline-bloc';
+		$(".hideBeforeRecording").removeClass("hideBeforeRecording");
 	});
 	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 		$(".video").attr({
